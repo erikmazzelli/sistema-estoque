@@ -11,7 +11,7 @@ from utils import validar_campos_obrigatorios, validar_email, verificar_enviar_a
 
 load_dotenv()
 app = Flask(__name__)
-CORS(app, origins=['http://localhost:3000'])
+CORS(app)
 
 SECRET_KEY = os.getenv("SECRET_KEY", "chave_padrao")
 
