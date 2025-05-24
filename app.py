@@ -244,11 +244,3 @@ def listar_movimentos(usuario, id):
         return jsonify(movimentos)
     except Exception as e:
         return jsonify({"erro": "Erro ao listar movimentos", "detalhes": str(e)}), 500
-
-
-# ------------------------
-# INICIAR A API
-# ------------------------
-if __name__ == "__main__":
-    porta = int(os.getenv("API_PORT", 5000))
-    app.run(debug=True, port=porta)
